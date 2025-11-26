@@ -1,0 +1,7 @@
+# C++ executable and .o files
+*.o
+test
+*.so
+*.dot
+bin/test*
+.vscode

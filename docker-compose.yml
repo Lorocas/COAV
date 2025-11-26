@@ -1,0 +1,42 @@
+# version: '3.8'
+services:
+  # Service name
+  debian-env:
+    # Build Dockerfile image
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Image name
+    image: coav-image
+
+    # Container name
+    container_name: coav-container
+
+    # Host name
+    hostname: coav
+
+    # Mount current directory in the container
+    volumes:
+      - .:/workspace:cached
+
+    # Debug
+    cap_add:
+      - SYS_PTRACE
+
+    # Useful for C++, Go, or Rust application
+    security_opt:
+      - seccomp:unconfined
+
+    # Activate virtual terminal in container
+    tty: true
+
+    # STDIN open
+    stdin_open: true
+
+    # Shell bash when starting container
+    command: /bin/bash
+
+    # Terminal coloration
+    environment:
+      - TERM=xterm-256color

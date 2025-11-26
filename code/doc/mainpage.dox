@@ -1,0 +1,9 @@
+/**
+ * @mainpage COAV35 - Plugin documentation
+ *
+ * @section build_sec Build and Usage
+ * To build the project, run the command `make`.
+ * For running tests, run the command `make tests`.
+ *
+ * Plugin made by **Lorenzo LUCAS -- ROBLOT** and **Alicia PLATH**.
+ */
